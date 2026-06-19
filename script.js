@@ -27,6 +27,28 @@ async function searchUser() {
             <p>Following: ${userData.following}</p>
             <p>Public Repos: ${userData.public_repos}</p>
         `;
+        
 
+        const repoResponse =
+            await fetch(`https://api.github.com/users/${username}/repos`);
+
+        const repoData = await repoResponse.json();
+
+        let repoHTML = "<h2>Repositories</h2>";
+
+        repoData.forEach(repo => {
+            repoHTML += `
+                <div class="repo-card">
+                    <h3>${repo.name}</h3>
+                    <p>${repo.language || "Not Specified"}</p>
+                </div>
+            `;
+        });
+
+        reposDiv.innerHTML = repoHTML;
+
+    } catch (error) {
+        profileDiv.innerHTML = "Something went wrong";
     }
-} 
+}
+
