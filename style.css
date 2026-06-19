@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#profile {
+    margin-top: 20px;
+}
+
+img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.repo-card {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+}
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #24292e;
+    color: white;
+    font-size: 14px;
+}
