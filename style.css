@@ -1,45 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+    padding: 10px;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 input {
-    padding: 10px;
-    width: 250px;
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 12px 20px;
+    margin: 10px 5px;
     cursor: pointer;
+    background-color: #0366d6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0256c7;
 }
 
 #profile {
-    margin-top: 20px;
+    margin-top: 30px;
+    padding: 20px;
 }
 
 img {
-    width: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    margin: 10px 0;
 }
 
 .repo-card {
     background: white;
-    margin: 10px auto;
-    padding: 10px;
-    width: 60%;
-    border-radius: 5px;
-}
-footer {
-    margin-top: 30px;
+    margin: 15px auto;
     padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+}
+
+.repo-card:hover {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
     background-color: #24292e;
     color: white;
     font-size: 14px;
+}
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .repo-card {
+        max-width: 100%;
+        padding: 12px;
+        margin: 10px auto;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 12px;
+        font-size: 12px;
+        margin: 8px 3px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .repo-card {
+        padding: 10px;
+        margin: 8px auto;
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 11px;
+        margin-top: 20px;
+    }
 }
